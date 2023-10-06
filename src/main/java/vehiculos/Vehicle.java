@@ -1,6 +1,6 @@
 package vehiculos;
 
-public class Vehicle extends Product {
+public abstract class Vehicle extends Product {
 
     private int speed;
     private double price;
@@ -14,6 +14,7 @@ public class Vehicle extends Product {
         this.engine = engine;
         this.taxt_amt = taxt_amt;
     }
+
     //getters and setters
     public int getSpeed() {
         return speed;
@@ -51,10 +52,21 @@ public class Vehicle extends Product {
     protected float taxt_amt = 0.10f;
 
 
-
     public Vehicle(String name) {
         super(name);
     }
 
-    public
+    // method to print vehicle type
+    public void printVehicleType() {
+        System.out.println("Vehicle Type: " + this.getClass().getSimpleName());
+    }
+
+    //method to get price after tax
+    public float getPriceAfterTax(Vehicle vehicle) {
+        double priceBeforeTax = vehicle.getPrice();
+        double priceAfterTax = priceBeforeTax + (priceBeforeTax * vehicle.getTaxt_amt());
+        return (float) priceAfterTax;
+
+
+    }
 }

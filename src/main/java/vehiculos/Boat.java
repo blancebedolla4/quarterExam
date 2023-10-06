@@ -1,6 +1,6 @@
 package vehiculos;
 
-public class Boat extends Vehicle{
+public class Boat extends Vehicle implements Driveable{
 // ivar
     private boolean hasGps;
     public Boat(String name, boolean hasGps) {
