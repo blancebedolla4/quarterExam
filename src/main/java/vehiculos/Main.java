@@ -8,8 +8,8 @@ public class Main {
 
         // creating instance of plane, boat, car and truck
         Plane plane = new Plane("Boeing","5000",50,000);
-        Boat boat = new Boat();
-        Car car = new Car();
+        Boat boat = new Boat("bote",true);
+        Car car = new Car("mustang",4);
         Truck truck = new Truck();
         // create an Arraylist of Vehicles
         List<Vehicle> vehiclesList = new ArrayList<>();
